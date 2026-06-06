@@ -1,0 +1,448 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: rgb(36, 49, 43);
+    background-color: #18211e;
+    padding: 0 15px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: #18211e;
+    color: rgba(234, 238, 238, 1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo Specific Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none; /* Removes underline if logo is a link */
+    color: rgb(227, 235, 234);
+}
+
+.logo-img {
+    height: 60px; /* Adjust this height based on your logo design */
+    width: auto;  /* Maintains aspect ratio */
+    display: block;
+    object-fit: contain;
+    border-color: #1a202c;
+    border-radius: 8px;
+}
+
+/* Ensure the nav-container stays aligned */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Consistent height for the navbar */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgb(243, 241, 241);
+    text-decoration: none;
+    font-size: 1.0rem;
+    transition: color 0.3s;
+}
+
+.nav-links a.active {
+    color: #568203;
+    border-bottom: 2px solid #568203;
+    padding-bottom: 5px;
+}
+
+/* Hero Section */
+.hero {
+    height: 500px;
+    background: linear-gradient(rgba(17, 27, 27, 0.82), rgba(52, 73, 74, 0.6)), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #e6f0efff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: rgb(26, 112, 83);
+    color: #1a202c;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: rgb(26, 112, 83);;
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 0;
+    background: rgb(245, 244, 244);
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.card-grid {
+    display: grid;
+    width: 100%;
+    border-radius: 8px;
+    padding: 2rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.1rem;
+background-color: #18211e;
+}
+
+.card {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: rgb(237, 247, 247);
+    color: #0f1817ff;
+    border: 1px solid #091515ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+.card small {
+    display: block;
+    padding: 0;
+}
+
+.tag {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #568203;
+    font-weight: 600;
+    padding: 0;
+}
+
+/* AI Agent Section */
+.ai-agent {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.ai-agent iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about {
+    padding: 4rem 0;
+    background: #cce4b9;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.about-text, .video-placeholder {
+    flex: 1;
+    min-width: 300px;
+}
+
+.label {
+    color: #05816f;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.video-placeholder {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-placeholder img {
+    width: 100%;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.video-overlay i {
+    font-size: 4rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    background-color: #3d5152ff;
+    color: #f4f4f4;
+}
+
+.form-container {
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #18211e;
+    color: rgb(26, 112, 83);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+    font-size: 1.0rem;
+    color: rgb(151, 186, 45);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links a {
+    margin-left: 1.5rem;
+    color: #e6f0efff;
+    text-decoration: none;
+}
+
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* WhatsApp Floating Action Button */
+.whatsapp-fab {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.whatsapp-fab:hover {
+    background-color: #1DA851; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+/* Chat Popup Box */
+.chat-popup {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+}
+
+.chat-popup.active {
+    display: flex;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-header {
+    background: #18211e;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info strong { display: block; font-size: 0.9rem; }
+.header-info p { font-size: 0.75rem; margin: 0; color: #568203; }
+.online-dot { height: 8px; width: 8px; background: #568203; border-radius: 50%; display: inline-block; }
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.chat-body {
+    padding: 20px;
+    background: #f0f2f5;
+    height: 300px; /* Increased height to fit agent list */
+    overflow-y: auto;
+}
+
+.message-received {
+    background: white;
+    padding: 10px;
+    border-radius: 0 10px 10px 10px;
+    font-size: 0.85rem;
+    max-width: 85%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Agent Selection Styles */
+.agent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.agent-item {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.agent-item:hover { background: #f8f9fa; }
+
+.agent-item.selected {
+    border-color: #568203;
+    background: #f1f8e9;
+}
+
+.agent-avatar {
+    width: 35px;
+    height: 35px;
+    background: #18211e;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.agent-details strong { font-size: 0.85rem; display: block; }
+
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+    border-top: 1px solid #eee;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-footer button {
+    background: #568203;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Override global padding for the icon inside the FAB */
+.whatsapp-fab i {
+    padding: 0;
+}
