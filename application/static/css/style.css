@@ -122,6 +122,10 @@ body {
     background: rgb(245, 244, 244);
 }
 
+.services .container {
+    max-width: 100%;
+}
+
 .section-title {
     margin-bottom: 2rem;
 }
